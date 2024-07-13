@@ -5,7 +5,7 @@ TARGET = membot
 all: format clean build run
 
 format:
-	clang-format -i -style=Google src/*.cpp src/*.h
+	clang-format -i -style=Google src/*.cpp include/*.h
 
 clean:
 	rm -rf build
