@@ -17,7 +17,7 @@ class ChatLogic {
   ////
 
   // data handles (owned)
-  std::vector<GraphNode *> _nodes;
+  std::vector<std::unique_ptr<GraphNode>> _nodes;
   std::vector<GraphEdge *> _edges;
 
   ////
@@ -37,10 +37,6 @@ class ChatLogic {
                              T &element);
 
  public:
-  // constructor / destructor
-  ChatLogic();
-  ~ChatLogic();
-
   // getter / setter
   void SetPanelDialogHandle(ChatBotPanelDialog *panelDialog);
   void SetChatbotHandle(ChatBot *chatbot);
